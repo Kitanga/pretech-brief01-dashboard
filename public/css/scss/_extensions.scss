@@ -1,0 +1,77 @@
+// Houses all my extensions
+// General styles
+%fullscreen {
+    @extend %full-width;
+    @extend %full-height;
+}
+
+%full-width {
+    width: 100%;
+}
+
+%full-height {
+    height: 100%;
+}
+
+%flex {
+    display: flex;
+}
+
+%flex-wrap {
+    flex-wrap: wrap;
+}
+
+.hidden {
+    display: none;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+// Text styles
+%text-center {
+    text-align: center;
+}
+
+%text-underline {
+    text-decoration: underline;
+}
+
+// Used to center the direct children of a flex container centrally on the screen
+%center-items {
+    align-items: center;
+    justify-content: center;
+}
+
+// Used to horizontally center the code using margin 
+%margin-auto {
+    margin: 0 auto;
+}
+
+// Positioning styles
+%relative {
+    position: relative;
+}
+
+%absolute {
+    position: absolute;
+}
+
+%fixed {
+    position: fixed;
+}
+
+// Image styles
+%imageRenderPixelated {
+    -ms-interpolation-mode: nearest-neighbor;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -o-pixelated;
+    image-rendering: pixelated;
+}
+
+%responsive-image {
+    @extend %full-width;
+    height: auto;
+}

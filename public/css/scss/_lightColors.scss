@@ -1,0 +1,11 @@
+/* Light theme colors */
+
+$light-primary-color: #2a2c39;
+
+.light .primary-color {
+    color: $light-primary-color;
+}
+
+.light {
+    background-color: white;
+}

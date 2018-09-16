@@ -1,0 +1,101 @@
+html,
+body, #app, #login {
+  width: 100%;
+}
+
+html,
+body, #app, #login {
+  height: 100%;
+}
+
+#app, #login, #login form, #login form .input-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.hidden {
+  display: none;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+#app, #login, #login form, #login form .input-container {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/* Light theme colors */
+.light .primary-color {
+  color: #2a2c39;
+}
+
+.light {
+  background-color: white;
+}
+
+/* Store input variables */
+.btn {
+  cursor: pointer;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #2a2c39;
+}
+
+.btn {
+  cursor: pointer;
+}
+
+#login form {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 34%;
+  height: 61%;
+  background-color: white;
+  -webkit-box-shadow: 0 1px 6px #000000;
+          box-shadow: 0 1px 6px #000000;
+  border-radius: 7px;
+}
+
+#login form .input-container {
+  width: 90%;
+  height: 40px;
+  margin-bottom: 17px;
+}
+
+#login form .input-container input {
+  margin-left: 17px;
+  height: 100%;
+  border: 2px solid black;
+  padding-left: 4px;
+}
+
+#login form .input-container input:focus {
+  outline: none;
+}
+
+#login form .input-container .btn.submit {
+  width: 70%;
+  padding: 14px;
+  color: white;
+  background-color: black;
+  border: 1px solid black;
+}
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,76 @@
+// Base styles for the whole website
+
+@import "extensions";
+@import "lightColors";
+@import "darkColors";
+@import "input";
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    @extend %fullscreen;
+    margin: 0;
+    padding: 0;
+    background-color: $light-primary-color;
+}
+
+.btn {
+    cursor: pointer;
+}
+
+// Main App styles
+#app {
+    @extend %fullscreen;
+    @extend %flex;
+    @extend %center-items;
+}
+
+// Login Element
+
+#login {
+    @extend %fullscreen;
+    @extend %flex;
+    @extend %center-items;
+}
+
+#login form {
+    @extend %flex;
+    @extend %center-items;
+    flex-direction: column;
+    width: 34%;
+    height: 61%;
+    background-color: white;
+    box-shadow: 0 1px 6px #000000;
+    border-radius: 7px;
+}
+
+#login form .input-container {
+    @extend %flex;
+    @extend %center-items;
+    width: 90%;
+    height: 40px;
+    margin-bottom: 17px;
+}
+
+#login form .input-container input {
+    margin-left: 17px;
+    height: 100%;
+    border: 2px solid black;
+    padding-left: 4px;
+}
+
+#login form .input-container input:focus {
+    outline: none;
+}
+
+#login form .input-container .btn.submit {
+    width: 70%;
+    padding: 14px;
+    color: white;
+    background-color: black;
+    border: 1px solid black;
+}
+// #login form .input-container input {}
