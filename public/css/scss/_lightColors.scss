@@ -1,11 +1,14 @@
 /* Light theme colors */
 
-$light-primary-color: #2a2c39;
+$light-primary-color: #26354c;
+$light-primary-color-darker: hsla(216, 33%, 14%, .43);
+$light-secondary-color: #1898e6;
+$light-focus-color: hsl(203, 81%, 50%);
 
 .light .primary-color {
     color: $light-primary-color;
 }
 
 .light {
-    background-color: white;
+    // background-color: white;
 }

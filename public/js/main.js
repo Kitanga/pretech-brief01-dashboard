@@ -19,20 +19,25 @@ const login = Vue.component('login', {
         }
     },
     props: ['shouldshow'],
-    template: `<div id="login" v-if="shouldshow">
-        <form action="#" v-on:submit="signin">
-            <h2>Login</h2>
+    template: `
+    <div id="login" v-if="shouldshow">
+        <h2>Semi<br/>Exciting<br/>Games</h2>
+        <form action="#" v-on:keyup.enter="signin">
             <div class="input-container">
-                <i class="fas fa-user-tie fa-2x"></i>
-                <input type="text" v-model="username" id="username"/>
+                <label for="username"><i class="fas fa-user-tie"></i></label>
+                <input type="text" v-model="username" placeholder="Username" id="username" autofocus/>
             </div>
             <div class="input-container">
-                <i class="fa fa-lock fa-2x"></i>
-                <input type="text" v-model="password" id="password"/>
+                <label for="password"><i class="fa fa-lock"></i></label>
+                <input type="password" v-model="password" placeholder="Password" id="password"/>
             </div>
-            <div class="btn submit">Login</div>
+            <div class="btn submit" v-on:click="signin">Login</div>
         </form>
     </div>`
+});
+
+Vue.component('loader', {
+    template: `<div id="loader"></div>`
 });
 
 const vm = new Vue({

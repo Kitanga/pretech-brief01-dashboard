@@ -8,7 +8,7 @@ body, #app, #login {
   height: 100%;
 }
 
-#app, #login, #login form, #login form .input-container {
+#app, #login, #login form, #login form .input-container, #login form .input-container label, #login form .btn.submit {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -22,7 +22,15 @@ body, #app, #login {
   cursor: pointer;
 }
 
-#app, #login, #login form, #login form .input-container {
+#login form .btn.submit {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#app, #login, #login form, #login form .input-container, #login form .input-container label, #login form .btn.submit {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -33,16 +41,7 @@ body, #app, #login {
 
 /* Light theme colors */
 .light .primary-color {
-  color: #2a2c39;
-}
-
-.light {
-  background-color: white;
-}
-
-/* Store input variables */
-.btn {
-  cursor: pointer;
+  color: #26354c;
 }
 
 * {
@@ -54,11 +53,21 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background-color: #2a2c39;
+  background-color: #26354c;
 }
 
 .btn {
   cursor: pointer;
+}
+
+/* Login Element */
+#login {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: black;
+  background-color: white;
 }
 
 #login form {
@@ -66,36 +75,71 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 34%;
-  height: 61%;
-  background-color: white;
-  -webkit-box-shadow: 0 1px 6px #000000;
-          box-shadow: 0 1px 6px #000000;
-  border-radius: 7px;
+  width: 100%;
+  height: 100%;
 }
 
 #login form .input-container {
-  width: 90%;
   height: 40px;
+  border-radius: 50px;
+  padding: 0 7px;
   margin-bottom: 17px;
+  border: 1px solid rgba(24, 33, 47, 0.43);
+}
+
+#login form .input-container label {
+  width: 19%;
+  height: 100%;
+  font-size: 1em;
+  color: #1898e7;
 }
 
 #login form .input-container input {
-  margin-left: 17px;
+  width: 81%;
   height: 100%;
-  border: 2px solid black;
-  padding-left: 4px;
+  border: none;
+  background-color: transparent;
+  padding-left: 7px;
 }
 
 #login form .input-container input:focus {
   outline: none;
 }
 
-#login form .input-container .btn.submit {
-  width: 70%;
-  padding: 14px;
+#login form .btn.submit {
+  border-radius: 50px;
+  padding: 0 7px;
+  height: 40px;
   color: white;
-  background-color: black;
-  border: 1px solid black;
+  background-color: #1898e7;
+  text-align: center;
+  -webkit-box-shadow: 0 7px 43px 1px rgba(24, 33, 47, 0.43);
+          box-shadow: 0 7px 43px 1px rgba(24, 33, 47, 0.43);
+  -webkit-transition: -webkit-box-shadow .25s ease-in-out;
+  transition: -webkit-box-shadow .25s ease-in-out;
+  transition: box-shadow .25s ease-in-out;
+  transition: box-shadow .25s ease-in-out, -webkit-box-shadow .25s ease-in-out;
+  will-change: box-shadow;
+  text-transform: uppercase;
+}
+
+#login form .btn.submit::-moz-selection {
+  background: transparent !important;
+  /* WebKit/Blink Browsers */
+}
+
+#login form .btn.submit::selection {
+  background: transparent !important;
+  /* WebKit/Blink Browsers */
+}
+
+#login form .btn.submit::-moz-selection {
+  background: transparent !important;
+  /* Gecko Browsers */
+}
+
+#login form .input-container,
+#login form .btn.submit {
+  width: 61%;
 }
 /*# sourceMappingURL=styles.css.map */
