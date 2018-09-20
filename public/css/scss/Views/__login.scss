@@ -15,8 +15,8 @@
     flex-direction: column;
     width: 100%;
     height: 100%;
-    // border: 1px solid $light-focus-color;
-    // background-color: $light-focus-color;
+    // border: 1px solid $light-secondary-color;
+    // background-color: $light-secondary-color;
     // box-shadow: 0 7px 43px 1px $light-primary-color-darker;
     // border-radius: 7px;
 }
@@ -39,7 +39,7 @@
     width: 19%;
     height: 100%;
     font-size: 1em;
-    color: $light-focus-color;
+    color: $light-secondary-color;
     // padding-left: 7px;
 }
 
@@ -49,7 +49,7 @@
     // margin-left: 17px;
     border: none;
     background-color: transparent;
-    // color: $light-focus-color;
+    // color: $light-secondary-color;
     padding-left: 7px;
 }
 
@@ -65,7 +65,7 @@
     padding: 0 7px;
     height: 40px;
     color: white;
-    background-color: $light-focus-color;
+    background-color: $light-secondary-color;
     text-align: center;
     box-shadow: 0 7px 43px 1px $light-primary-color-darker;
     transition: box-shadow .25s ease-in-out;

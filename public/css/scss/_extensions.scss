@@ -13,16 +13,20 @@
     height: 100%;
 }
 
-%flex {
-    display: flex;
-}
-
 %flex-wrap {
     flex-wrap: wrap;
 }
 
+%flex {
+    display: flex;
+}
+
+%block {
+    display: block;
+}
+
 .hidden {
-    display: none;
+    display: none !important;
 }
 
 .pointer {

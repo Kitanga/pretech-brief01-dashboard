@@ -1,21 +1,25 @@
 html,
-body, #app, #login {
+body, #app, .light #loader, #login {
   width: 100%;
 }
 
 html,
-body, #app, #login {
+body, #app, .light #loader, #login {
   height: 100%;
 }
 
-#app, #login, #login form, #login form .input-container, #login form .input-container label, #login form .btn.submit {
+#app, .light #loader, #login, #login form, #login form .input-container, #login form .input-container label, #login form .btn.submit {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
+.light #loader:before {
+  display: block;
+}
+
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 .pointer {
@@ -30,7 +34,7 @@ body, #app, #login {
   user-select: none;
 }
 
-#app, #login, #login form, #login form .input-container, #login form .input-container label, #login form .btn.submit {
+#app, .light #loader, #login, #login form, #login form .input-container, #login form .input-container label, #login form .btn.submit {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -39,11 +43,24 @@ body, #app, #login {
           justify-content: center;
 }
 
-/* Light theme colors */
-.light .primary-color {
-  color: #26354c;
+.light #loader {
+  position: absolute;
 }
 
+/* Light theme colors */
+.light .primary-color {
+  background-color: white;
+}
+
+.light .primary-color-text {
+  background-color: white;
+}
+
+.light {
+  background-color: white;
+}
+
+/* #region General Style */
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -53,13 +70,46 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background-color: #26354c;
+  background-color: white;
 }
 
 .btn {
   cursor: pointer;
 }
 
+/* #endregion */
+/* #region Loader Styles */
+.light #loader {
+  z-index: 7;
+  background-color: white;
+}
+
+.light #loader:before {
+  content: '';
+  -webkit-animation: spin .81s linear infinite forwards;
+          animation: spin .81s linear infinite forwards;
+  width: 43px;
+  height: 43px;
+  border: 4px solid rgba(24, 152, 230, 0.19);
+  border-top-color: #1898e6;
+  border-radius: 50%;
+}
+
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(340deg);
+            transform: rotate(340deg);
+  }
+}
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(340deg);
+            transform: rotate(340deg);
+  }
+}
+
+/* #endregion */
 /* Login Element */
 #login {
   -webkit-box-orient: vertical;
@@ -91,7 +141,7 @@ body {
   width: 19%;
   height: 100%;
   font-size: 1em;
-  color: #1898e7;
+  color: #1898e6;
 }
 
 #login form .input-container input {
@@ -111,7 +161,7 @@ body {
   padding: 0 7px;
   height: 40px;
   color: white;
-  background-color: #1898e7;
+  background-color: #1898e6;
   text-align: center;
   -webkit-box-shadow: 0 7px 43px 1px rgba(24, 33, 47, 0.43);
           box-shadow: 0 7px 43px 1px rgba(24, 33, 47, 0.43);
@@ -142,4 +192,7 @@ body {
 #login form .btn.submit {
   width: 61%;
 }
+
+/* #region Dashboard styles */
+/* #endregion */
 /*# sourceMappingURL=styles.css.map */

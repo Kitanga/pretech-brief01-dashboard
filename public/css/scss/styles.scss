@@ -5,6 +5,7 @@
 @import "darkColors";
 // @import "input";
 
+/* #region General Style */
 * {
     box-sizing: border-box;
 }
@@ -21,6 +22,8 @@ body {
     cursor: pointer;
 }
 
+/* #endregion */
+
 // Main App styles
 #app {
     @extend %fullscreen;
@@ -28,4 +31,6 @@ body {
     @extend %center-items;
 }
 
+@import "Views/_loader";
 @import "Views/_login";
+@import "Views/_dash";

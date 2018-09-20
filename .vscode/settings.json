@@ -4,5 +4,7 @@
         ".vscode/**",
         "public/css/css/**",
         "Documentation/**",
-    ]
+    ],
+    "liveServer.settings.root": "/public",
+    "liveServer.settings.file": "/index.html"
 }

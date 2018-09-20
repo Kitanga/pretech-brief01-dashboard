@@ -1,0 +1,31 @@
+/* #region Loader Styles */
+.light {
+    #loader {
+        @extend %fullscreen;
+        @extend %flex;
+        @extend %center-items;
+        @extend %absolute;
+
+        z-index: 7;
+        background-color: $light-primary-color;
+    }
+
+    #loader:before {
+        @extend %block;
+        content: '';
+        animation: spin .81s linear infinite forwards;
+        width: 43px;
+        height: 43px;
+        $border-outer-color: transparentize($light-secondary-color, .81);
+        border: 4px solid $border-outer-color;
+        border-top-color: $light-secondary-color;
+        border-radius: 50%;
+    }
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(340deg);
+    }
+}
+/* #endregion */
