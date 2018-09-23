@@ -29,8 +29,13 @@ body {
     @extend %fullscreen;
     @extend %flex;
     @extend %center-items;
+
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 @import "Views/_loader";
 @import "Views/_login";
 @import "Views/_dash";
+
+// Media Queries
+@import "Views/_responsive";

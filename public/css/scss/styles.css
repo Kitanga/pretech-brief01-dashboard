@@ -1,14 +1,14 @@
 html,
-body, #app, .light #loader, #login {
+body, #app, .light #loader, #login, #dash, #dash #sidenav, #dash nav, #dash main, #dash #month-selector {
   width: 100%;
 }
 
 html,
-body, #app, .light #loader, #login {
+body, #app, .light #loader, #login, #dash, #dash #sidenav {
   height: 100%;
 }
 
-#app, .light #loader, #login, #login form, #login form .input-container, #login form .input-container label, #login form .btn.submit {
+#app, .light #loader, #login, #login form, #login h2 div, #login form .input-container, #login form .input-container label, #login form .btn.submit, #dash #sidenav, #dash #sidenav span.theme, #dash nav, #dash #month-selector {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -34,7 +34,7 @@ body, #app, .light #loader, #login {
   user-select: none;
 }
 
-#app, .light #loader, #login, #login form, #login form .input-container, #login form .input-container label, #login form .btn.submit {
+#app, .light #loader, #login, #login form, #login form .input-container, #login form .input-container label, #login form .btn.submit, #dash #sidenav span.theme {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -43,7 +43,7 @@ body, #app, .light #loader, #login {
           justify-content: center;
 }
 
-.light #loader {
+.light #loader, #dash #sidenav {
   position: absolute;
 }
 
@@ -57,6 +57,15 @@ body, #app, .light #loader, #login {
 }
 
 .light {
+  background-color: white;
+}
+
+/* Light theme colors */
+.dark .primary-color {
+  background-color: white;
+}
+
+.dark .primary-color-text {
   background-color: white;
 }
 
@@ -78,6 +87,10 @@ body {
 }
 
 /* #endregion */
+#app {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 /* #region Loader Styles */
 .light #loader {
   z-index: 7;
@@ -127,6 +140,19 @@ body {
           flex-direction: column;
   width: 100%;
   height: 100%;
+}
+
+#login h2 {
+  width: 34%;
+}
+
+#login h2 div {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  margin-bottom: 7px;
+  text-transform: uppercase;
 }
 
 #login form .input-container {
@@ -194,5 +220,161 @@ body {
 }
 
 /* #region Dashboard styles */
+#dash #sidenav {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  top: 0;
+  left: 0;
+  padding-top: 17px;
+  text-align: center;
+  will-change: transform;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: -webkit-transform .25s ease-in;
+  transition: -webkit-transform .25s ease-in;
+  transition: transform .25s ease-in;
+  transition: transform .25s ease-in, -webkit-transform .25s ease-in;
+  z-index: 10;
+  background-color: #1898e6;
+  color: white;
+}
+
+#dash #sidenav span {
+  width: 100%;
+  font-size: 1.4em;
+}
+
+#dash #sidenav span.theme {
+  padding: 17px;
+  max-height: 70px;
+  color: black;
+}
+
+#dash #sidenav span.theme span {
+  background-color: white;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+#dash #sidenav.active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+#dash nav {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 7px;
+  font-size: 1.4em;
+  height: 7%;
+  background-color: #1898e6;
+  color: white;
+}
+
+#dash nav i {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  cursor: pointer;
+}
+
+#dash nav div {
+  -webkit-box-flex: 3;
+      -ms-flex-positive: 3;
+          flex-grow: 3;
+  text-align: center;
+}
+
+#dash nav i.invisible {
+  visibility: hidden;
+}
+
+#dash main {
+  height: -webkit-fill-available;
+}
+
+#dash main i {
+  cursor: pointer;
+}
+
+#dash #month-selector {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-size: 1.4em;
+  padding: 17px;
+}
+
+#dash .chart-container {
+  display: block;
+  position: relative;
+  width: 100%;
+  margin-bottom: 17px;
+}
+
 /* #endregion */
+#dash.dark {
+  background-color: white;
+}
+
+#dash.dark #sidenav {
+  background-color: #364760;
+  color: white;
+}
+
+#dash.dark #sidenav span {
+  width: 100%;
+  font-size: 1.4em;
+}
+
+#dash.dark #sidenav span.theme {
+  color: black;
+}
+
+#dash.dark #sidenav span.theme span {
+  background-color: white;
+}
+
+#dash.dark nav {
+  background-color: #364760;
+  color: white;
+}
+
+/* Responsive Media queries */
+@media screen and (min-width: 426px) {
+  #login form > * {
+    width: 52%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #dash nav {
+    padding: 25px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #login h2 {
+    width: 17%;
+    margin-top: 10%;
+  }
+  #login form > * {
+    width: 25% !important;
+  }
+  #dash #sidenav {
+    width: 34%;
+  }
+  #dash main {
+    padding: 0 17%;
+  }
+  #dash .chart-container {
+    margin-bottom: 25px;
+  }
+}
 /*# sourceMappingURL=styles.css.map */

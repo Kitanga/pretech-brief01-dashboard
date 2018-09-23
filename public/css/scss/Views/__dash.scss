@@ -1,3 +1,129 @@
 /* #region Dashboard styles */
+#dash {
+    @extend %fullscreen;
+
+    #sidenav {
+        @extend %fullscreen;
+        @extend %absolute;
+        @extend %flex;
+        flex-wrap: wrap;
+        // flex-direction: column;
+        top: 0;
+        left: 0;
+        padding-top: 17px;
+        text-align: center;
+        will-change: transform;
+        transform: translateX(-100%);
+        transition: transform .25s ease-in;
+        z-index: 10;
+        background-color: $light-secondary-color;
+        color: white;
+    }
+
+    #sidenav span {
+        width: 100%;
+        font-size: 1.4em;
+    }
+
+    #sidenav span.theme {
+        @extend %flex;
+        @extend %center-items;
+        padding: 17px;
+        max-height: 70px;
+        color: black;
+    }
+
+    #sidenav span.theme span {
+        background-color: white;
+        border-radius: 7px;
+        cursor: pointer;
+    }
+
+    #sidenav.active {
+        transform: translateX(0);
+    }
+
+    nav {
+        @extend %full-width;
+        @extend %flex;
+        justify-content: center;
+        align-items: center;
+        padding: 7px;
+        font-size: 1.4em;
+        height: 7%;
+        background-color: $light-secondary-color;
+        color: white;
+
+        i {
+            // @extend %absolute;
+            // left: 7px;
+            flex-grow: 1;
+            cursor: pointer;
+        }
+
+        div {
+            // @extend %absolute;
+            // @extend %full-width;
+            // top: 1.75%;
+            flex-grow: 3;
+            text-align: center;
+        }
+
+        i.invisible {
+            visibility: hidden;
+        }
+    }
+
+    main {
+        @extend %full-width;
+        height: -webkit-fill-available;
+    }
+
+    main i {
+        cursor: pointer;
+    }
+
+    #month-selector {
+        @extend %full-width;
+        @extend %flex;
+        align-items: center;
+        justify-content: space-around;
+        font-size: 1.4em;
+        padding: 17px;
+    }
+
+    .chart-container {
+        display: block;
+        position: relative;
+        width: 100%;
+        margin-bottom: 17px;
+    }
+}
 
 /* #endregion */
+
+#dash.dark {
+    background-color: $dark-primary-color;
+    #sidenav {
+        background-color: $dark-primary-color-darker;
+        color: white;
+    }
+
+    #sidenav span {
+        width: 100%;
+        font-size: 1.4em;
+    }
+
+    #sidenav span.theme {
+        color: black;
+    }
+
+    #sidenav span.theme span {
+        background-color: white;
+    }
+
+    nav {
+        background-color: $dark-primary-color-darker;
+        color: white;
+    }
+}

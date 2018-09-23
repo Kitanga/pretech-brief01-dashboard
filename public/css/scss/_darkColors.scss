@@ -1,0 +1,15 @@
+/* Light theme colors */
+
+// $dark-primary-color: hsla(216, 33%, 14%, .43);
+$dark-primary-color: white;
+// $dark-primary-color-darker: #26354c;
+$dark-primary-color-darker: #364760;
+$dark-secondary-color: #1898e6;
+// $dark-focus-color: hsl(203, 81%, 50%);
+
+.dark .primary-color {
+    background-color: $dark-primary-color;
+}
+.dark .primary-color-text {
+    background-color: $dark-primary-color;
+}

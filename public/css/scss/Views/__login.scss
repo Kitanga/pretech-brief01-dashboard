@@ -21,6 +21,17 @@
     // border-radius: 7px;
 }
 
+#login h2 {
+    width: 34%;
+}
+#login h2 div {
+    @extend %flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 7px;
+    text-transform: uppercase;
+}
+
 #login form .input-container {
     @extend %flex;
     @extend %center-items;
